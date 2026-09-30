@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Joy University</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        header {
+            background-color: #063970;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* HOME */
+        .home {
+            min-height: 90vh;
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.6),
+                    rgba(0,0,0,0.6)
+                ),
+                url("image/college.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+        }
+
+        .home-content h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .home-content p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #222;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: white;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #063970;
+            font-size: 35px;
+            margin-bottom: 35px;
+        }
+
+        /* ABOUT */
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            text-align: left;
+        }
+
+        .about img {
+            width: 45%;
+            border-radius: 12px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            color: #063970;
+            margin-bottom: 15px;
+        }
+
+        /* COURSES */
+        #courses {
+            background-color: #f4f7fb;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 280px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            color: #063970;
+            margin-bottom: 10px;
+        }
+
+        /* FACULTY */
+        .faculty-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .faculty {
+            width: 280px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .faculty img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .faculty h3 {
+            color: #063970;
+        }
+
+        /* MEDIA */
+        #media {
+            background-color: #f4f7fb;
+        }
+
+        video {
+            width: 70%;
+            max-width: 700px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        audio {
+            width: 70%;
+            max-width: 600px;
+        }
+
+        /* CONTACT */
+        .contact {
+            background-color: #063970;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            margin: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #02284f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .home-content h1 {
+                font-size: 35px;
+            }
+
+            .about {
+                flex-direction: column;
+            }
+
+            .about img {
+                width: 100%;
+            }
+
+            video,
+            audio {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+
+        <div class="logo">
+            Joy University
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#courses">Courses</a>
+            <a href="#faculty">Faculty</a>
+            <a href="#media">Media</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HOME -->
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <h1>Welcome to Joy University</h1>
+
+            <p>
+                Education • Innovation • Excellence
+            </p>
+
+            <a href="#about" class="btn">
+                Explore Joy University
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2>About Joy University</h2>
+
+        <div class="about">
+
+            <img src="image/college.jpg" alt="Joy University">
+
+            <div class="about-text">
+
+                <h3>About Us</h3>
+
+                <p>
+                    Joy University provides quality education and
+                    encourages students to develop knowledge,
+                    skills and creativity.
+                </p>
+
+                <p>
+                    We provide a friendly learning environment
+                    with experienced faculty members and modern
+                    facilities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COURSES -->
+    <section id="courses">
+
+        <h2>Our Courses</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>BCA</h3>
+                <p>
+                    Bachelor of Computer Applications with
+                    programming and computer science subjects.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>B.Sc Computer Science</h3>
+                <p>
+                    Learn computer science, programming,
+                    databases and software development.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>BBA</h3>
+                <p>
+                    Learn business management, marketing,
+                    finance and entrepreneurship.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FACULTY -->
+    <section id="faculty">
+
+        <h2>Our Faculty</h2>
+
+        <div class="faculty-container">
+
+            <!-- HEAD -->
+            <div class="faculty">
+
+                <img src="image/faculty1.jpg" alt="Chithra">
+
+                <h3>Chithra</h3>
+
+                <p>
+                    Head of SOCI Department
+                </p>
+
+            </div>
+
+
+            <!-- FACULTY -->
+            <div class="faculty">
+
+                <img src="image/faculty2.jpg" alt="Sathana">
+
+                <h3>Sathana</h3>
+
+                <p>
+                    Class Coordinator
+                </p>
+
+            </div>
+
+
+            <!-- FACULTY -->
+            <div class="faculty">
+
+                <img src="image/faculty3.jpg" alt="Nishi ">
+
+                <h3>Nishi </h3>
+
+                <p>
+                    Co-Class Coordinator
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VIDEO AND AUDIO -->
+    <section id="media">
+
+        <h2>University Media</h2>
+
+        <h3>University Video</h3>
+
+        <br>
+
+        <video controls>
+
+            <source src="image/college.mp4" type="video/mp4">
+
+            Your browser does not support video.
+
+        </video>
+
+        <br><br>
+
+        <h3>University Audio</h3>
+
+        <br>
+
+        <audio controls>
+
+            <source src="image/college.mp3" type="audio/mpeg">
+
+            Your browser does not support audio.
+
+        </audio>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>📍 Joy University, Tamil Nadu</p>
+
+        <p>📧 joyuniversity@example.com</p>
+
+        <p>📞 +91 98765 43210</p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Joy University | All Rights Reserved
+        </p>
+
+    </footer>
+
+</body>
+</html>
